@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+const asset = (p) => new URL(p, import.meta.env.BASE_URL).toString();
 import { X, ExternalLink, Monitor, Smartphone, Globe, ChevronRight, Maximize2, Minimize2, LayoutGrid, Layers } from 'lucide-react';
 
 // --- MOCK DATA (Replace URLs with your actual hosted projects) ---
@@ -12,8 +13,8 @@ const PROJECTS = [
     url: "https://otgstats.com", 
     category: "Analytics",
     color: "from-purple-500 to-indigo-500",
-    logo: "/OtgStats.svg",
-    thumb: "/thumbs/otgstats.png"
+    logo: asset("OtgStats.svg"),
+    thumb: asset("thumbs/otgstats.png")
   },
   {
     id: 2,
@@ -22,8 +23,8 @@ const PROJECTS = [
     url: "https://jeet.ing", 
     category: "Tool",
     color: "from-pink-500 to-rose-500",
-    logo: "/jeeting.svg",
-    thumb: "/thumbs/jeeting.png"
+    logo: asset("jeeting.svg"),
+    thumb: asset("thumbs/jeeting.png")
   },
   {
     id: 3,
@@ -32,8 +33,8 @@ const PROJECTS = [
     url: "https://xeenon.space/", 
     category: "Creative",
     color: "from-cyan-500 to-blue-500",
-    logo: "/Xeenon-Space.svg",
-    thumb: "/thumbs/xeenon-space.png"
+    logo: asset("Xeenon-Space.svg"),
+    thumb: asset("thumbs/xeenon-space.png")
   },
   {
     id: 4,
@@ -42,8 +43,8 @@ const PROJECTS = [
     url: "https://f7ashp0int.github.io/partipanels/", 
     category: "UI Kit",
     color: "from-emerald-400 to-teal-600",
-    logo: "/Parti-Panel.svg",
-    thumb: "/thumbs/parti-panels.png"
+    logo: asset("Parti-Panel.svg"),
+    thumb: asset("thumbs/parti-panels.png")
   },
   {
     id: 5,
@@ -52,8 +53,8 @@ const PROJECTS = [
     url: "https://f7ashp0int.github.io/marblex-frame", 
     category: "Web3",
     color: "from-orange-400 to-red-500",
-    logo: "/MarbleX-Frame.svg",
-    thumb: "/thumbs/marblex-frame.png"
+    logo: asset("MarbleX-Frame.svg"),
+    thumb: asset("thumbs/marblex-frame.png")
   },
   {
     id: 6,
@@ -62,8 +63,8 @@ const PROJECTS = [
     url: "https://f7ashp0int.github.io/parti", 
     category: "Social",
     color: "from-slate-400 to-gray-600",
-    logo: "/Parti.svg",
-    thumb: "/thumbs/parti.png"
+    logo: asset("Parti.svg"),
+    thumb: asset("thumbs/parti.png")
   },
   {
     id: 7,
@@ -72,8 +73,8 @@ const PROJECTS = [
     url: "https://p2ecalculator.site/", 
     category: "Tool",
     color: "from-indigo-500 to-purple-500",
-    logo: "/p2e%20calculator.svg",
-    thumb: "/thumbs/p2e-calculator.png"
+    logo: asset("p2e calculator.svg"),
+    thumb: asset("thumbs/p2e-calculator.png")
   },
   {
     id: 8,
@@ -82,8 +83,8 @@ const PROJECTS = [
     url: "https://rjarivi.github.io/aspect-flow", 
     category: "Design",
     color: "from-rose-500 to-pink-500",
-    logo: "/Aspect%20Flow.svg",
-    thumb: "/thumbs/aspect-flow.png"
+    logo: asset("Aspect Flow.svg"),
+    thumb: asset("thumbs/aspect-flow.png")
   },
   {
     id: 9,
@@ -92,8 +93,8 @@ const PROJECTS = [
     url: "https://rjarivi.github.io/catstanbul", 
     category: "Game",
     color: "from-blue-500 to-cyan-500",
-    logo: "/Catstanbul.svg",
-    thumb: "/thumbs/catstanbul.png"
+    logo: asset("Catstanbul.svg"),
+    thumb: asset("thumbs/catstanbul.png")
   },
   {
     id: 10,
@@ -102,8 +103,8 @@ const PROJECTS = [
     url: "https://f7ashp0int.github.io/Web3-Games-Graveyard/", 
     category: "Archive",
     color: "from-teal-600 to-emerald-400",
-    logo: "/Web3%20Games%20Graveyard.svg",
-    thumb: "/thumbs/web3-graveyard.png"
+    logo: asset("Web3 Games Graveyard.svg"),
+    thumb: asset("thumbs/web3-graveyard.png")
   },
   {
     id: 11,
@@ -112,8 +113,8 @@ const PROJECTS = [
     url: "https://f7ashp0int.github.io/Gallaxia-Frame/", 
     category: "Creative",
     color: "from-red-500 to-orange-400",
-    logo: "/Gallaxia-Frame.svg",
-    thumb: "/thumbs/gallaxia-frame.png"
+    logo: asset("Gallaxia-Frame.svg"),
+    thumb: asset("thumbs/gallaxia-frame.png")
   }
 ];
 
@@ -153,7 +154,7 @@ const App = () => {
         <header className="p-8 flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shadow-lg overflow-hidden">
-              <img src="/VibeFolio.svg" alt="VibeFolio" className="w-8 h-8 object-contain" />
+              <img src={asset('VibeFolio.svg')} alt="VibeFolio" className="w-8 h-8 object-contain" />
             </div>
             <div>
               <h1 className="text-2xl font-bold tracking-tight">VibeFolio</h1>
