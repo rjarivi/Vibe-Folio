@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-const asset = (p) => new URL(p, import.meta.env.BASE_URL).toString();
+const asset = (p) => `${import.meta.env.BASE_URL}${p}`;
 import { X, ExternalLink, Monitor, Smartphone, Globe, ChevronRight, Maximize2, Minimize2, LayoutGrid, Layers } from 'lucide-react';
 
 // --- MOCK DATA (Replace URLs with your actual hosted projects) ---
