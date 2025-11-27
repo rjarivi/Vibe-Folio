@@ -14,6 +14,8 @@ const projects = [
   { slug: 'catstanbul', url: 'https://rjarivi.github.io/catstanbul' },
   { slug: 'web3-graveyard', url: 'https://f7ashp0int.github.io/Web3-Games-Graveyard/' },
   { slug: 'gallaxia-frame', url: 'https://f7ashp0int.github.io/Gallaxia-Frame/' },
+  { slug: 'tiermaker', url: 'https://tiermaker.site' },
+  { slug: 'grade-calculator', url: 'https://rjarivi.github.io/Grade-Calculator/' },
 ]
 
 const outDir = path.resolve('public', 'thumbs')

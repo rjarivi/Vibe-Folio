@@ -124,7 +124,7 @@ const PROJECTS = [
     category: "Tool",
     color: "from-lime-400 to-green-500",
     logo: asset("TierMaker.svg"),
-    thumb: asset("vite.svg")
+    thumb: asset("thumbs/tiermaker.png")
   }
   ,{
     id: 13,
@@ -134,7 +134,7 @@ const PROJECTS = [
     category: "Education",
     color: "from-sky-500 to-cyan-400",
     logo: asset("GradeCal.svg"),
-    thumb: asset("vite.svg")
+    thumb: asset("thumbs/grade-calculator.png")
   }
 ];
 
@@ -239,6 +239,9 @@ const App = () => {
             ))}
           </div>
         </main>
+        <footer className="max-w-7xl mx-auto px-6 pb-8 text-center text-xs text-gray-500">
+          © 2025 rjarivi · All Rights Reserved. <a href="https://github.com/rjarivi/Vibe-Folio/blob/main/LICENSE" target="_blank" rel="noreferrer" className="underline hover:text-white">License</a>
+        </footer>
       </div>
 
       {/* --- IMMERSIVE VIEWER OVERLAY --- */}

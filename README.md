@@ -1,16 +1,60 @@
-# React + Vite
+# VibeFolio — Portfolio of Projects
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Idea to Deployed. In Record Time. This repository hosts the interactive portfolio that previews and links to my projects.
 
-Currently, two official plugins are available:
+## Live Site
+- https://rjarivi.github.io/Vibe-Folio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Projects
+- OTG Stats — Real-time analytics and tracking platform.
+  - Link: https://otgstats.com
+  - Stack: Not publicly disclosed.
+- Jeet.ing — Web utility and interaction tool.
+  - Link: https://jeet.ing
+  - Stack: Not publicly disclosed.
+- Xeenon Space — Immersive space-themed visual experience.
+  - Link: https://xeenon.space/
+  - Stack: Not publicly disclosed.
+- Parti Panels — Interactive panel components and UI experiments.
+  - Link: https://f7ashp0int.github.io/partipanels/
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
+- Marblex Frame — Web3 integration framework display.
+  - Link: https://f7ashp0int.github.io/marblex-frame
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
+- Parti — Social interaction and community platform.
+  - Link: https://f7ashp0int.github.io/parti
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
+- P2E Calculator — Economics calculator for Play-to-Earn gaming.
+  - Link: https://p2ecalculator.site/
+  - Stack: Static JS site (details not publicly disclosed).
+- Aspect Flow — Fluid design and layout showcase.
+  - Link: https://rjarivi.github.io/aspect-flow
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
+- Catstanbul — A playful adventure in a feline world.
+  - Link: https://rjarivi.github.io/catstanbul
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
+- Web3 Graveyard — A memorial for sunsetted Web3 games.
+  - Link: https://f7ashp0int.github.io/Web3-Games-Graveyard/
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
+- Gallaxia Frame — Galactic visual framing tool.
+  - Link: https://f7ashp0int.github.io/Gallaxia-Frame/
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
+- TierMaker.site — Create and share tier lists with drag-and-drop boards.
+  - Link: https://tiermaker.site
+  - Stack: Not publicly disclosed.
+- Grade Calculator — SGPA/CGPA converter and grade calculator.
+  - Link: https://rjarivi.github.io/Grade-Calculator/
+  - Stack: React, Vite, Tailwind CSS, GitHub Pages.
 
-## React Compiler
+## Portfolio App Stack
+- Frontend: React + Vite
+- Styling: Tailwind CSS, Space Grotesk font
+- Icons: Lucide React
+- Build: Vite
+- Deployment: GitHub Pages (`docs/` directory), base `/Vibe-Folio/`
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Icons Credit
+- SVG Glass Icons by Nucleo — https://nucleoapp.com/svg-glass-icons
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## License
+- All Rights Reserved. See `LICENSE`.
