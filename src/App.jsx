@@ -183,7 +183,9 @@ const App = () => {
           </div>
           
           <a 
-            href="#" 
+            href="https://x.com/rjarivi" 
+            target="_blank" 
+            rel="noopener noreferrer" 
             className="px-6 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/30 transition-all duration-300 text-sm font-medium backdrop-blur-md"
           >
             Contact Me
