@@ -116,6 +116,26 @@ const PROJECTS = [
     logo: asset("Gallaxia-Frame.svg"),
     thumb: asset("thumbs/gallaxia-frame.png")
   }
+  ,{
+    id: 12,
+    title: "TierMaker.site",
+    description: "Create and share tier lists with drag-and-drop boards.",
+    url: "https://tiermaker.site",
+    category: "Tool",
+    color: "from-lime-400 to-green-500",
+    logo: "https://tiermaker.site/favicon.svg",
+    thumb: asset("vite.svg")
+  }
+  ,{
+    id: 13,
+    title: "Grade Calculator",
+    description: "SGPA/CGPA converter and grade calculator.",
+    url: "https://rjarivi.github.io/Grade-Calculator/",
+    category: "Education",
+    color: "from-sky-500 to-cyan-400",
+    logo: "https://rjarivi.github.io/Grade-Calculator/favicon.svg",
+    thumb: asset("vite.svg")
+  }
 ];
 
 const App = () => {
@@ -194,7 +214,7 @@ const App = () => {
                   {/* Inner Gradient/Content */}
                   <div className="absolute inset-0 p-6 flex flex-col justify-end z-20 bg-gradient-to-b from-transparent via-black/50 to-black/90">
                     <div className={`w-12 h-12 rounded-2xl mb-4 bg-white/5 border border-white/10 flex items-center justify-center shadow-lg overflow-hidden`}>
-                      <img src={project.logo} alt={project.title} className="w-8 h-8 object-contain" />
+                      <img src={project.logo} alt={project.title} className="w-8 h-8 object-contain" onError={(e) => { e.currentTarget.src = asset('vite.svg'); }} />
                     </div>
                     <div className="flex justify-between items-end">
                       <div>
@@ -305,7 +325,7 @@ const App = () => {
                     `}
                   >
                     <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden">
-                      <img src={p.logo} alt={p.title} className="w-6 h-6 object-contain" />
+                      <img src={p.logo} alt={p.title} className="w-6 h-6 object-contain" onError={(e) => { e.currentTarget.src = asset('vite.svg'); }} />
                     </div>
                     <div className="overflow-hidden">
                       <p className="text-sm font-medium truncate text-white">{p.title}</p>
