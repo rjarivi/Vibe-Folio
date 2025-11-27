@@ -123,7 +123,7 @@ const PROJECTS = [
     url: "https://tiermaker.site",
     category: "Tool",
     color: "from-lime-400 to-green-500",
-    logo: "https://tiermaker.site/favicon.svg",
+    logo: asset("TierMaker.svg"),
     thumb: asset("vite.svg")
   }
   ,{
@@ -133,7 +133,7 @@ const PROJECTS = [
     url: "https://rjarivi.github.io/Grade-Calculator/",
     category: "Education",
     color: "from-sky-500 to-cyan-400",
-    logo: "https://rjarivi.github.io/Grade-Calculator/favicon.svg",
+    logo: asset("GradeCal.svg"),
     thumb: asset("vite.svg")
   }
 ];
