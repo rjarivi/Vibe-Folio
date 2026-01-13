@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 const asset = (p) => `${import.meta.env.BASE_URL}${p}`;
 import { X, ExternalLink, Monitor, Smartphone, Globe, ChevronRight, Maximize2, Minimize2, LayoutGrid, Layers } from 'lucide-react';
+import { DottedGlowBackground } from './components/ui/DottedGlowBackground';
 
 // --- MOCK DATA (Replace URLs with your actual hosted projects) ---
 // NOTE: Many big sites (Google, GitHub) block iframes via X-Frame-Options. 
@@ -57,6 +58,16 @@ const PROJECTS = [
     thumb: asset("thumbs/aspect-flow.png")
   },
   {
+    id: 15,
+    title: "Social Frames",
+    description: "Create custom social media frames.",
+    url: "https://rjarivi.github.io/Social-Frames/",
+    category: "Creative",
+    color: "from-blue-500 to-cyan-500",
+    logo: asset("Social-Frames.png"),
+    thumb: asset("thumbs/social-frames.png")
+  },
+  {
     id: 6,
     title: "TierMaker.site",
     description: "Create and share tier lists with drag-and-drop boards.",
@@ -107,26 +118,6 @@ const PROJECTS = [
     thumb: asset("thumbs/p2e-calculator.png")
   },
   {
-    id: 11,
-    title: "Marblex Frame",
-    description: "Web3 integration framework display.",
-    url: "https://f7ashp0int.github.io/marblex-frame",
-    category: "Web3",
-    color: "from-orange-400 to-red-500",
-    logo: asset("MarbleX-Frame.svg"),
-    thumb: asset("thumbs/marblex-frame.png")
-  },
-  {
-    id: 12,
-    title: "Parti",
-    description: "Social interaction and community platform.",
-    url: "https://f7ashp0int.github.io/parti",
-    category: "Social",
-    color: "from-slate-400 to-gray-600",
-    logo: asset("Parti.svg"),
-    thumb: asset("thumbs/parti.png")
-  },
-  {
     id: 13,
     title: "Parti Panels",
     description: "Interactive panel components and UI experiments.",
@@ -136,17 +127,9 @@ const PROJECTS = [
     logo: asset("Parti-Panel.svg"),
     thumb: asset("thumbs/parti-panels.png")
   },
-  {
-    id: 14,
-    title: "Gallaxia Frame",
-    description: "Galactic visual framing tool.",
-    url: "https://f7ashp0int.github.io/Gallaxia-Frame/",
-    category: "Creative",
-    color: "from-red-500 to-orange-400",
-    logo: asset("Gallaxia-Frame.svg"),
-    thumb: asset("thumbs/gallaxia-frame.png")
-  }
+
 ];
+
 
 const App = () => {
   const [activeProject, setActiveProject] = useState(null);
@@ -166,16 +149,19 @@ const App = () => {
     <div className="min-h-screen w-full bg-black text-white font-sans selection:bg-brand selection:text-white overflow-hidden relative">
 
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-black" />
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              'linear-gradient(to right, rgba(148,163,184,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.15) 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
-          }}
+        <DottedGlowBackground
+          gap={18}
+          radius={1.5}
+          opacity={0.15}
+          speedMin={0.3}
+          speedMax={1.6}
+          speedScale={1}
+          color="rgba(255, 255, 255, 0.5)"
+          glowColor="rgba(100, 200, 255, 0.9)"
+          backgroundOpacity={0}
         />
       </div>
+
 
       {/* --- MAIN CONTENT --- */}
       <div className={`relative z-10 transition-all duration-500 ${activeProject ? 'scale-95 opacity-0 pointer-events-none' : 'opacity-100 scale-100'}`}>
