@@ -134,7 +134,7 @@ const PROJECTS = [
 const App = () => {
   const [activeProject, setActiveProject] = useState(null);
   const [viewMode, setViewMode] = useState('desktop'); // desktop, mobile, tablet
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Handle closing via Escape key
   useEffect(() => {
@@ -292,12 +292,13 @@ const App = () => {
               </button>
             </div>
 
-            {/* Right: Sidebar Toggle */}
+            {/* Right: Sidebar Toggle (Optional but kept for consistency) */}
             <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className={`p-2 rounded-lg transition-colors ${isSidebarOpen ? 'text-white bg-white/10' : 'text-gray-400 hover:text-white'}`}
+              className={`p-2 rounded-lg transition-colors hover:bg-white/10 ${isSidebarOpen ? 'text-brand' : 'text-gray-400 hover:text-white'}`}
+              title={isSidebarOpen ? "Collapse Sidebar" : "Expand Sidebar"}
             >
-              {isSidebarOpen ? <Maximize2 size={18} /> : <Minimize2 size={18} />}
+              <LayoutGrid size={18} />
             </button>
           </div>
 
@@ -308,30 +309,43 @@ const App = () => {
             <div className={`
               bg-black/20 border-r border-white/10 backdrop-blur-md flex flex-col
               transition-all duration-300 ease-in-out absolute md:relative z-40 h-full
-              ${isSidebarOpen ? 'w-64 translate-x-0' : 'w-0 -translate-x-full md:translate-x-0 md:w-0 opacity-0'}
+              ${isSidebarOpen ? 'w-64' : 'w-[72px]'}
             `}>
-              <div className="p-4 border-b border-white/5">
-                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Your Projects</h3>
+              <div className="p-4 border-b border-white/5 flex items-center justify-between">
+                {isSidebarOpen && <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider animate-in fade-in slide-in-from-left-2 transition-all">Your Projects</h3>}
+                <button
+                  onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                  className={`p-1.5 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-all ${!isSidebarOpen ? 'mx-auto' : ''}`}
+                >
+                  <ChevronRight size={18} className={`transition-transform duration-300 ${isSidebarOpen ? 'rotate-180' : 'rotate-0'}`} />
+                </button>
               </div>
               <div className="overflow-y-auto p-2 space-y-2 flex-1">
                 {PROJECTS.map((p) => (
                   <button
                     key={p.id}
-                    onClick={() => setActiveProject(p)}
+                    onClick={() => {
+                      setActiveProject(p);
+                      setIsSidebarOpen(false);
+                    }}
                     className={`
                       w-full text-left p-3 rounded-xl transition-all flex items-center gap-3
                       ${activeProject.id === p.id
                         ? 'bg-white/10 border border-white/10 shadow-lg shadow-slate-900/20'
                         : 'hover:bg-white/5 border border-transparent hover:border-white/5 opacity-60 hover:opacity-100'}
+                      ${!isSidebarOpen ? 'justify-center' : ''}
                     `}
+                    title={!isSidebarOpen ? p.title : ''}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden">
+                    <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
                       <img src={p.logo} alt={p.title} className="w-6 h-6 object-contain" onError={(e) => { e.currentTarget.src = asset('vite.svg'); }} />
                     </div>
-                    <div className="overflow-hidden">
-                      <p className="text-sm font-medium truncate text-white">{p.title}</p>
-                      <p className="text-xs text-gray-400 truncate">{p.category}</p>
-                    </div>
+                    {isSidebarOpen && (
+                      <div className="overflow-hidden animate-in fade-in slide-in-from-left-2 transition-all">
+                        <p className="text-sm font-medium truncate text-white">{p.title}</p>
+                        <p className="text-xs text-gray-400 truncate">{p.category}</p>
+                      </div>
+                    )}
                   </button>
                 ))}
               </div>
