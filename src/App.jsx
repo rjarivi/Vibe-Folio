@@ -29,9 +29,9 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: "Jeet.ing",
+    title: "InfoFi Hub",
     description: "Web utility and interaction tool.",
-    url: "https://jeet.ing",
+    url: "https://infofi-hub.netlify.app",
     category: "Tool",
     color: "from-pink-500 to-rose-500",
     logo: asset("jeeting.svg"),

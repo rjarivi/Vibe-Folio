@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer'
 
 const projects = [
   { slug: 'otgstats', url: 'https://otgstats.com' },
-  { slug: 'jeeting', url: 'https://jeet.ing' },
+  { slug: 'jeeting', url: 'https://infofi-hub.netlify.app' },
   { slug: 'xeenon-space', url: 'https://xeenon.space/' },
   { slug: 'parti-panels', url: 'https://f7ashp0int.github.io/partipanels/' },
   { slug: 'marblex-frame', url: 'https://f7ashp0int.github.io/marblex-frame' },

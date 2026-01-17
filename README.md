@@ -9,8 +9,8 @@ Idea to Deployed. In Record Time. This repository hosts the interactive portfoli
 - OTG Stats — Real-time analytics and tracking platform.
   - Link: https://otgstats.com
   - Stack: Not publicly disclosed.
-- Jeet.ing — Web utility and interaction tool.
-  - Link: https://jeet.ing
+- InfoFi Hub — Web utility and interaction tool.
+  - Link: https://infofi-hub.netlify.app
   - Stack: Not publicly disclosed.
 - Xeenon Space — Immersive space-themed visual experience.
   - Link: https://xeenon.space/
